@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Активные Заказы</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/client_profile">Профиль</a></li>
+          <li><a href="/parcel_history">История Посылок</a></li>
+          <li><a href="/active_orders" class="active">Активные Заказы</a></li>
+          <li><a href="/order_token">Заказать Талон</a></li>
+          <li><a href="/client_chat">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Текущие Посылки</h2>
+      <ul>
+        <li>
+          <h3>Посылка #67890</h3>
+          <p>Статус: В пути</p>
+          <a href="/client_chat" class="button">Связаться с Курьером или Администратором</a>
+<!--          <a href="/client_chat" class="button">Связаться с Администратором</a>-->
+        </li>
+        <!-- Дополнительные посылки -->
+      </ul>
+    </main>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Активные Заказы Курьера</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/courier_profile">Профиль</a></li>
+          <li><a href="/courier_active_orders" class="active">Активные Заказы</a></li>
+          <li><a href="/courier_chat">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <button class="button">Выйти на Смену</button>
+      <h2>Текущие Заказы</h2>
+      <ul>
+        <li>
+          <h3>Заказ #12345</h3>
+          <p>Адрес доставки: ул. Ленина, д. 5</p>
+          <a href="/courier_client_chat" class="button">Связаться с Клиентом</a>
+        </li>
+        <!-- Дополнительные заказы -->
+      </ul>
+    </main>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>

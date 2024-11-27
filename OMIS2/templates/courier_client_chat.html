@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Мой Клиент</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/courier_profile">Профиль</a></li>
+          <li><a href="/courier_active_orders">Активные Заказы</a></li>
+          <li><a href="/courier_chat">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="chat-window">
+        <!-- Сообщения чата с клиентом -->
+        <div class="chat-message">
+          <strong>Клиент:</strong>
+          Могу ли я изменить адрес доставки?
+        </div>
+        <!-- Дополнительные сообщения -->
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Введите сообщение..." />
+        <button>Отправить</button>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>

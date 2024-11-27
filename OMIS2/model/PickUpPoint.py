@@ -1,0 +1,2 @@
+class PickUpPoint:
+    pass

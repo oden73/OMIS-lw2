@@ -1,0 +1,2 @@
+class InterfaceObject:
+    pass

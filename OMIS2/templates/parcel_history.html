@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>История Посылок</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/client_profile">Профиль</a></li>
+          <li><a href="/parcel_history" class="active">История Посылок</a></li>
+          <li><a href="/active_orders">Активные Заказы</a></li>
+          <li><a href="/order_token">Заказать Талон</a></li>
+          <li><a href="/client_chat">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Отправленные Посылки</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Номер Посылки</th>
+              <th>Получатель</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#12345</td>
+              <td>Петр Петров</td>
+              <td>Доставлено</td>
+            </tr>
+            <!-- Дополнительные записи -->
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Полученные Посылки</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Номер Посылки</th>
+              <th>Отправитель</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#54321</td>
+              <td>Сергей Сергеев</td>
+              <td>Доставлено</td>
+            </tr>
+            <!-- Дополнительные записи -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>

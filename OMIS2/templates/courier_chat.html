@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Связь с Клиентом и Администратором</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/courier_profile">Профиль</a></li>
+          <li><a href="/courier_active_orders">Активные Заказы</a></li>
+          <li><a href="/courier_chat" class="active">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="chat-container">
+        <div class="contacts-list">
+          <h3>Контакты</h3>
+          <div class="contact active" onclick="openChat('client')">Клиент: Иван Иванов</div>
+          <div class="contact" onclick="openChat('admin')">Администратор</div>
+          <!-- Дополнительные контакты -->
+        </div>
+        <div class="chat-window">
+          <div class="chat-header">
+            <h3 id="chat-with">Клиент: Иван Иванов</h3>
+          </div>
+          <div class="chat-messages" id="chat-messages">
+            <!-- Сообщения чата -->
+            <div class="chat-message">
+              <span class="sender">Клиент:</span>
+              Могу ли я изменить адрес доставки?
+            </div>
+            <!-- Дополнительные сообщения -->
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Введите сообщение..." id="message-input" />
+            <button onclick="sendMessage()">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function openChat(contact) {
+        document.getElementById("chat-with").innerText =
+          contact === "client" ? "Клиент: Иван Иванов" : "Администратор";
+        document.getElementById("chat-messages").innerHTML = "";
+        // Здесь можно загрузить сообщения для выбранного контакта
+      }
+      function sendMessage() {
+        const messageInput = document.getElementById("message-input");
+        const message = messageInput.value;
+        if (message.trim() !== "") {
+          const chatMessages = document.getElementById("chat-messages");
+          const newMessage = document.createElement("div");
+          newMessage.classList.add("chat-message");
+          newMessage.innerHTML = `<span class="sender">Вы:</span> ${message}`;
+          chatMessages.appendChild(newMessage);
+          messageInput.value = "";
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+      }
+    </script>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>

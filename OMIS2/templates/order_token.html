@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Заказать Талон</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/client_profile">Профиль</a></li>
+          <li><a href="/parcel_history">История Посылок</a></li>
+          <li><a href="/active_orders">Активные Заказы</a></li>
+          <li><a href="/order_token" class="active">Заказать Талон</a></li>
+          <li><a href="/client_chat">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="#" method="post">
+        <label for="delivery_point">Пункт Выдачи:</label>
+        <select id="delivery_point" name="delivery_point">
+          <option value="point1">Пункт 1</option>
+          <option value="point2">Пункт 2</option>
+          <!-- Дополнительные пункты -->
+        </select>
+
+        <label for="date">Дата и Время:</label>
+        <input type="datetime-local" id="date" name="date" />
+
+        <button type="submit">Заказать</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>

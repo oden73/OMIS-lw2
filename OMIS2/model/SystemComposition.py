@@ -1,0 +1,2 @@
+class SystemComposition:
+    pass

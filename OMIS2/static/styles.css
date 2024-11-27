@@ -1,0 +1,312 @@
+/* Сброс и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2b2b2b;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #3a3a3a;
+}
+
+main {
+  padding: 20px;
+  min-height: calc(100vh - 150px); /* Подстройка под высоту header и footer */
+}
+
+footer {
+  background-color: #2b2b2b;
+  color: #a0a0a0;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Округленные формы */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: #3a3a3a;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #e0e0e0;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #357ab8;
+}
+
+.profile-photo {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #4a90e2;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: #2b2b2b;
+}
+
+table th,
+table td {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+  text-align: left;
+}
+
+table th {
+  background-color: #333;
+  font-weight: bold;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #357ab8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+ul li h3 {
+  margin-bottom: 10px;
+}
+
+.chat-container {
+  display: flex;
+  height: 600px;
+  background-color: #2b2b2b;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.contacts-list {
+  width: 30%;
+  border-right: 1px solid #444;
+  overflow-y: auto;
+}
+
+.contacts-list h3 {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.contact {
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact:hover,
+.contact.active {
+  background-color: #3a3a3a;
+}
+
+.chat-window {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 15px;
+}
+
+.chat-message .sender {
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+.chat-input {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #444;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  background-color: #3a3a3a;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  color: #e0e0e0;
+}
+
+.chat-input button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #357ab8;
+}
+
+/* Стили для авторизации */
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #2b2b2b;
+  border-radius: 15px;
+  margin-top: 100px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-container form button {
+  width: 100%;
+}
+
+/* Активная ссылка в навигации */
+nav ul li a.active {
+  background-color: #4a90e2;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .contacts-list,
+  .chat-window {
+    width: 100%;
+    height: auto;
+  }
+
+  .chat-messages {
+    height: 300px;
+  }
+}

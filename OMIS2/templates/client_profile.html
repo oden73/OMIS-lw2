@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Профиль Пользователя</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/client_profile" class="active">Профиль</a></li>
+          <li><a href="/parcel_history">История Посылок</a></li>
+          <li><a href="/active_orders">Активные Заказы</a></li>
+          <li><a href="/order_token">Заказать Талон</a></li>
+          <li><a href="/client_chat">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="profile-section">
+        <img src="user_photo.jpg" alt="Фото пользователя" class="profile-photo" />
+        <form action="#" method="post">
+          <label for="full_name">ФИО:</label>
+          <input type="text" id="full_name" name="full_name" value="Иван Иванов" />
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" />
+
+          <label for="city">Город:</label>
+          <input type="text" id="city" name="city" value="Москва" />
+
+          <label for="country">Страна:</label>
+          <input type="text" id="country" name="country" value="Россия" />
+
+          <button type="submit">Сохранить Изменения</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>

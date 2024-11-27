@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Профиль Курьера</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/courier_profile" class="active">Профиль</a></li>
+          <li><a href="/courier_active_orders">Активные Заказы</a></li>
+          <li><a href="/courier_chat">Связь</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="profile-section">
+        <img src="courier_photo.jpg" alt="Фото курьера" class="profile-photo" />
+        <form action="#" method="post">
+          <label for="full_name">ФИО:</label>
+          <input type="text" id="full_name" name="full_name" value="Алексей Алексеев" />
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" />
+
+          <label for="city">Город:</label>
+          <input type="text" id="city" name="city" value="Санкт-Петербург" />
+
+          <label for="status">Статус Активности:</label>
+          <select id="status" name="status">
+            <option value="active">Активен</option>
+            <option value="inactive">Неактивен</option>
+          </select>
+
+          <button type="submit">Сохранить Изменения</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Логистическая Компания</p>
+    </footer>
+  </body>
+</html>
