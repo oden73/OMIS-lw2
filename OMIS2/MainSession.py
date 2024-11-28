@@ -3,6 +3,9 @@ from flask import Flask, redirect, render_template, request
 from view.StandtardInterfaceFactory import StandardInterfaceFactory
 from view.Application import Application
 
+from controller.MainController import MainController
+
+
 class MainSession:
     def __init__(self) -> None:
         self.app: Flask = Flask(__name__)
@@ -88,7 +91,7 @@ class MainSession:
     def launch(self) -> None:
         interface_factory: StandardInterfaceFactory = StandardInterfaceFactory()
         application: Application = Application()
-
+        main_controller: MainController = MainController(application)
 
         self.app.run(debug=True)
 
